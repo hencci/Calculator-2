@@ -1,3 +1,7 @@
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
+
 function add(a,b) {
     return a + b;
 }
@@ -13,6 +17,3 @@ function multiply(a,b) {
 function divide(a,b) {
     return a / b;
 }
-
-
-console.log(minus(5,4));
