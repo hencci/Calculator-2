@@ -41,3 +41,17 @@ function operate(firstNumber, operator, secondNumber) {
             return null;
     }
 }
+
+numKeys.forEach((numKey) => {
+    numKey.addEventListener("click", (e) => {
+        const value = e.target.innerText;
+        lowerDisplay.innerText += value;
+    })
+})
+
+opKeys.forEach((opKey) => {
+    opKey.addEventListener("click", (e) => {
+        operator = e.target.innerText
+        lowerDisplay.innerText += operator;
+    })
+})
