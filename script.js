@@ -28,5 +28,16 @@ function divide(a,b) {
 }
 
 function operate(firstNumber, operator, secondNumber) {
-
+    switch (operator) {
+        case '+':
+            return add(firstNumber, secondNumber);
+        case '-':
+            return minus(firstNumber, secondNumber);
+        case 'x':
+            return multiply(firstNumber, secondNumber);
+        case '÷':
+            return divide(firstNumber, secondNumber);
+        default:
+            return null;
+    }
 }
