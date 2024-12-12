@@ -57,3 +57,41 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+.key {
+    line-height: 70px;
+    text-align: center;
+    font-size: 20px;
+    border: 0.5px solid wheat;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.key:hover {
+    background-color: #0e0202;
+    box-shadow: 0px 0px 5px 5px gray;
+    color: white;
+}
+
+.key:active {
+    background-color: #555;
+    box-shadow: none;
+}
+
+.opKey {
+    background-color: #f90;
+    color: black;
+}
+
+.clearKey {
+    background-color: #f00;
+    color: white;
+}
+
+.equal {
+    background-color: #0a0;
+    color: white;
+}
