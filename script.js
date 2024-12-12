@@ -45,13 +45,30 @@ function operate(firstNumber, operator, secondNumber) {
 numKeys.forEach((numKey) => {
     numKey.addEventListener("click", (e) => {
         const value = e.target.innerText;
-        lowerDisplay.innerText += value;
+        //Removes the leading zero on the display
+        if (lowerDisplay.innerText === "0" && value !== ".") {
+            lowerDisplay.innerText = value;
+        }
+        else {
+            lowerDisplay.innerText += value;
+        }
     })
 })
 
 opKeys.forEach((opKey) => {
     opKey.addEventListener("click", (e) => {
-        operator = e.target.innerText
-        lowerDisplay.innerText += operator;
+        if (firstNumber !== null && operator !== null && lowerDisplay.innerText !== "") {
+            //Converts into a floating-point number
+            secondNumber = parseFloat(lowerDisplay.innerText);
+            const result = operate(firstNumber, operator, secondNumber);
+            lowerDisplay.innerText = result;
+            firstNumber = result;
+        }
+        else {
+            firstNumber = parseFloat(lowerDisplay.innerText);
+        }
+        operator = e.target.innerText;
+        upperDisplay.innerText = `${firstNumber} ${operator}`;
+        lowerDisplay.innerText = "";
     })
 })
