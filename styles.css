@@ -17,3 +17,37 @@ body {
     background-color: black;
     font-family: Arial, sans-serif
 }
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    width: 400px;
+    max-width: 100%;
+    margin: 20px;
+    border: solid 1px wheat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    background-color: black;
+    height: 100px;
+    color: white;
+    padding: 0 8px;
+    font-size: 30px;
+    border: solid 1px wheat;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.lowerDisplay, .upperDisplay {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
