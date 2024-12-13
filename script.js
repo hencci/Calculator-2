@@ -84,6 +84,10 @@ equalTo.addEventListener("click", () => {
     }
 })
 
+clearKeys.forEach(clearKey => {
+    clearKey.addEventListener("click", clearEntry);
+})
+
 function clearEntry(e) {
     if (e.target.id === "clear") {
         lowerDisplay.innerText = "";
