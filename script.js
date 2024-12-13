@@ -52,7 +52,7 @@ numKeys.forEach((numKey) => {
         if (lowerDisplay.innerText === "0" && value !== ".") {
             lowerDisplay.innerText = value;
         }
-        else if (value === '.' && lowerDisplay.innerText.includes(".")) {
+        else if (value === "." && lowerDisplay.innerText.includes(".")) {
             return;
         }
         else {
@@ -72,6 +72,9 @@ opKeys.forEach((opKey) => {
         }
         else if (upperDisplay.innerText.includes(`${operator}`)) {
             upperDisplay.innerText = `${firstNumber} ${operator}`;
+        }
+        else if (lowerDisplay.innerText === "") {
+            return;
         }
         else {
             firstNumber = parseFloat(lowerDisplay.innerText);
