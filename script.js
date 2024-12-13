@@ -79,5 +79,7 @@ equalTo.addEventListener("click", () => {
         const result = operate(firstNumber, operator, secondNumber);
         upperDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} =`
         lowerDisplay.innerText = result;
+        firstNumber = null;
+        operator = null;
     }
 })
