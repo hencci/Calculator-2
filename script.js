@@ -72,3 +72,12 @@ opKeys.forEach((opKey) => {
         lowerDisplay.innerText = "";
     })
 })
+
+equalTo.addEventListener("click", () => {
+    if (firstNumber !== null && operator !== null) {
+        secondNumber = parseFloat(lowerDisplay.innerText);
+        const result = operate(firstNumber, operator, secondNumber);
+        upperDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} =`
+        lowerDisplay.innerText = result;
+    }
+})
