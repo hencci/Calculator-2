@@ -83,3 +83,19 @@ equalTo.addEventListener("click", () => {
         operator = null;
     }
 })
+
+function clearEntry(e) {
+    if (e.target.id === "clear") {
+        lowerDisplay.innerText = "";
+        upperDisplay.innerText = "";
+        firstNumber = null;
+        secondNumber = null;
+        operator = null;
+    }
+    else if (e.target.id === "clearEntry") {
+        lowerDisplay.innerText = "";
+    }
+    else if (e.target.id === "backspace") {
+        lowerDisplay.innerText = lowerDisplay.innerText.slice(0, -1);
+    }
+}
