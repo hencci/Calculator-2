@@ -49,6 +49,9 @@ numKeys.forEach((numKey) => {
         if (lowerDisplay.innerText === "0" && value !== ".") {
             lowerDisplay.innerText = value;
         }
+        else if (value === '.' && lowerDisplay.innerText.includes(".")) {
+            return;
+        }
         else {
             lowerDisplay.innerText += value;
         }
