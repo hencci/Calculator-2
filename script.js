@@ -86,13 +86,15 @@ opKeys.forEach((opKey) => {
 })
 
 equalTo.addEventListener("click", () => {
-    if (firstNumber !== null && operator !== null) {
+    if ((firstNumber || firstNumber === 0) && operator) {
         secondNumber = parseFloat(lowerDisplay.innerText);
-        const result = operate(firstNumber, operator, secondNumber);
-        upperDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} =`;
-        lowerDisplay.innerText = result;
-        firstNumber = null;
-        operator = null;
+        if (secondNumber || secondNumber === 0) {
+            const result = operate(firstNumber, operator, secondNumber);
+            upperDisplay.innerText = `${firstNumber} ${operator} ${secondNumber} =`;
+            lowerDisplay.innerText = result;
+            firstNumber = null;
+            operator = null;
+        }
     }
 })
 
