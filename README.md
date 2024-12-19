@@ -7,7 +7,7 @@ This is a simple calculator application built using JavaScript, HTML, and CSS. T
 ## Table of Content
 
 * [Features](#features)
-* [Technologies used](#technologies used)
+* [Technologies used](#technologies-used)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
